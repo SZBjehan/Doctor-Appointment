@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,800;0,900;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+*{
+  font-family:'Raleway', sans-serif;
+  width: 100%;
+}
+/* Navbar */
+.nav{
+  background-color: #0d052c ;
+  overflow: hidden;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.nav-logo{
+  padding: 20px 0 0 50px;
+}
+.nav-photo{
+  max-height: 180px;
+  max-width: 180px;
+}
+
+.nav-title{
+  margin-top: -20px;
+  margin-left: 30%;
+  color: #ffffff;
+  font-weight: 400;
+}
+/* Doctors */
+.doctors {
+  background-color: #ffffff;
+  padding-top: 2em;
+  overflow: hidden;
+  padding-bottom: 6em;
+  /* margin-bottom: 14em; */
+}
+.p-background {
+  position: absolute;
+  opacity: 50%;
+  width: 100%;
+  height: 30em;
+  z-index: 0;
+}
+
+.doc-title{
+  font-weight: 700;
+  z-index: 1;
+}
+.doc-list{
+  padding-top: 2em;
+  margin-left: 8%;
+}
+.doc-list-box{
+  float: left;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  transition: 0.3s;
+  width: 18em;
+  height: 12em;
+  background-color: #0d052c;
+  color: #ffffff;
+  padding-top: 20px;
+  margin: 3em 30px 3em 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.doc-list-box:hover {
+  background-color: #09168b;
+  color: #ffffff;
+  transform:  scale(1.1);
+  transition: .75s;
+}
+
+@media screen and (max-width: 768px) {
+  .p-background  {
+      min-height: 36em;
+  }
+
+  .doctors {
+      margin-top: 4em;
+      margin-bottom: 2em;
+  }
+}
+
+
+
+/* Calendar  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer{
+  background-color: #0d052c;
+  overflow: hidden;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.foot-logo{
+  /* padding: 20px 0 0 50px; */
+  /* margin-top: -60px ; */
+  transition: 0.3s;
+  
+}
+.foot-logo:hover{
+  transform:  scale(1.1);
+  transition: .75s;
+}
+.foot-photo{
+  max-height: 180px;
+  max-width: 180px;
+}
+
+.foot-box {
+  float: left;
+  width: 45%;
+  margin-left: 20px;
+}
+.foot-box h1{
+  color: #ffffff;
+}
+.foot-left{
+  text-align: left;
+  padding: 2em 3em 0;
+
+}
+.foot-right{
+  padding: 2.5em 3em 2em;
+}
+
+.foot-title{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+.foot-info{
+  padding-top: 3px;    
+  color: #ffffff;
+}
+.foot-info a{
+  margin-top: 4px;
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+  font-weight: 700;
+}
+.foot-social{
+  padding-left: 3em;
+  display: flex;
+}
+.foot-social .fab,
+.foot-social .fas{
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 4px;
+}
+.foot-social .fab:hover,
+.foot-social .fas:hover{    
+  transition: .5s;
+  transform: scale(1.2);
+  color: #2e35e9;
+}
