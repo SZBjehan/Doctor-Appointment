@@ -10,7 +10,7 @@
   background-color: #0d052c ;
   overflow: hidden;
   position: sticky;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   width: 100%;
   justify-content: center;
@@ -47,17 +47,17 @@
   height: 30em;
   z-index: 0;
 }
-.doc-body{
-  z-index: 999;
-}
-.doc-title{
-  font-weight: 700;
-
-}
 .doc-list{
   padding-top: 2em;
   margin-left: 8%;
-
+  z-index: 99;
+}
+.doc-title{
+  font-weight: 700;
+  z-index: 10;
+}
+.doc-body{
+  z-index: 99;
 }
 .doc-list-box{
   float: left;
@@ -69,9 +69,9 @@
   background-color: #0d052c;
   color: #ffffff;
   padding-top: 20px;
-  margin: 3em 30px 3em 0;
+  margin: 3em 50px 3em 0;
   text-align: center;
-  
+  z-index: 99;
 }
 
 .doc-list-box:hover {
@@ -80,7 +80,9 @@
   transform:  scale(1.1);
   transition: .75s;
 }
-
+.doc-list-box h3{
+  color: aquamarine;
+}
 @media screen and (max-width: 768px) {
   .p-background  {
       min-height: 36em;
@@ -108,9 +110,10 @@
   padding: 0 0 3em 10%;
   text-align: center;
 }
-.week-box{
+.active-week-box{
   float: left;
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgb(240, 255, 245);
   border-radius: 5%;
   transition: 0.3s;
   width: 10em;
@@ -119,13 +122,59 @@
   margin: 3em 30px 3em 0;
   text-align: center;
   font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.week-box:hover {
-  background-color: #09168b;
-  color: #ffffff;
+.active-week-box:hover {
+  background-color: #ffffff;
   transform:  scale(1.0);
   transition: 1.5s;
+}
+
+.inactive-week-box{
+  float: left;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgb(194, 255, 104);
+  border-radius: 5%;
+  transition: 0.3s;
+  width: 10em;
+  height: 5em;
+  padding-top: 20px;
+  margin: 3em 30px 3em 0;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* 
+.inactive-week-box:hover {
+  background-color: #ffffff;
+  transform:  scale(1.0);
+  transition: 1.5s;
+} */
+.active{
+  border: rgb(0, 166, 255) 20px;
+  background-color: rgb(194, 255, 104);
+  border-radius: 10%;
+}
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.disabled:hover{
+  background-color: #a30000;
+  transform:  scale(.95);
+  transition: 1.5s;
+}
+
+/*  */
+
+.ava-no{
+  display: none;
+}
+.ava-yes{
+  overflow: hidden;
 }
 .availibility{
   overflow: hidden;
@@ -142,17 +191,15 @@
   transition: 0.3s;
   width: 15em;
   height: 5em;
-  padding-top: 30px;
+  padding: 30px;
   margin: 3em 30px 3em 0;
   text-align: center;
   font-size: 18px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .ava-box:hover {
-  background-color: #09168b;
-  color: #ffffff;
-  transform:  scale(1.1);
+  transform:  skewX(5deg);
   transition: .75s;
 }
 
@@ -161,23 +208,23 @@
   
 }
 .container button {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   border-radius: 10%;
   transition: 0.3s;
-  color: black;
+  color: rgb(255, 255, 255);
   font-family: Raleway, sans-serif;
   font-size: 18px;
   padding: 20px;
-  border: 2px solid #000;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 5%;
   cursor: pointer;  
 }
 .container button:hover{
   transform:  scale(1.1);
   transition: .50s;
-  background-color: #000000;
-  color: #fff;
-  border: 0;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+
 }
 
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import DocLogo from '../docLogo.png'
 import sqhLogo from '../square-health.png'
 function Nav(){
 

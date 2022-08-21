@@ -4,9 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import CalanderPage from './pages/CalanderPage';
-import Booking from './pages/Booking';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(

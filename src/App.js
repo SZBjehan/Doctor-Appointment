@@ -71,8 +71,3 @@ root.render(<App />);
 
 
 // export default App;
-
-
-{/* <LandingPage />
-<CalanderPage />
-<Booking /> */}
