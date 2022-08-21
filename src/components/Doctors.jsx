@@ -1,6 +1,6 @@
 import React from 'react'
 import ParticlesBg from 'particles-bg';
-import {Fade, Slide} from 'react-reveal';
+// import {Fade, Slide} from 'react-reveal';
 
 function Doctors(){
 
@@ -15,23 +15,24 @@ function Doctors(){
                     <div class="doc-title">
                         <h1>Doctors List</h1>
                     </div>
-                    <Slide right duration={1500}>
-                        <div class="doc-body">
-                            <div class="doc-list-box">
-                                <h2> Doctor Name </h2>
-                                <h3> Doctor Org </h3>
-                                <p> Visit Duration 15min</p>
-                            </div>
+                    {/* <Slide right duration={1500}> */}
+                        <div>
+                            <div class="doc-body">
+                                <div class="doc-list-box">
+                                    <h2> Doctor Name </h2>
+                                    <h3> Doctor Org </h3>
+                                    <p> Visit Duration 15min</p>
+                                </div>
 
-                            <div class="doc-list-box">
-                                <h2> Doctor Name </h2>
-                                <h3> Doctor Org </h3>
-                                <p> Visit Duration 15min</p>
-                            </div>
+                                <div class="doc-list-box">
+                                    <h2> Doctor Name </h2>
+                                    <h3> Doctor Org </h3>
+                                    <p> Visit Duration 15min</p>
+                                </div>
 
+                            </div>
                         </div>
-
-                    </Slide>
+                    {/* </Slide> */}
                 </div>
 
             </div>
