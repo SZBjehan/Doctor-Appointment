@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import BookDoctor from '../components/BookDoctor';
-
+import CalendarComponent from '../components/CalendarComponent'
 // import Doctors from '../components/Doctors';
 
 function Booking(){
@@ -10,8 +10,9 @@ function Booking(){
     return (
         <div>
             <Nav />
-            {/* <CalendarComponent /> */}
+
             <BookDoctor />
+            <CalendarComponent />
             {/* <Doctors /> */}
             <Footer />
         </div>

@@ -26,8 +26,8 @@ const events = [
     {
         title: "Big Meeting",
         allDay: true,
-        start: new Date(2022, 7, 1),
-        end: new Date(2022, 7, 1),
+        start: new Date(2022, 6, 1),
+        end: new Date(2022, 6, 1),
     },
     {
         title: "Vacation",
@@ -52,7 +52,7 @@ function CalendarComponent(){
 
     return (
         <div className="Calendar">
-            <h1>Calendar</h1>
+            <h1 className="cal">Calendar</h1>
             
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>

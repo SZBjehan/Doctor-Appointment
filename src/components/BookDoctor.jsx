@@ -6,7 +6,7 @@ import Records from "../db.json";
 import moment from 'moment';
 import axios from 'axios';
 
-const BookDoctor = () => {
+const BookDoctor = (recordID) => {
     const triggerText = 'Book Appointment';
     const onSubmit = (event) => {
       event.preventDefault(event);
@@ -26,6 +26,44 @@ const BookDoctor = () => {
     // const selectFile = () => {
     //     fileInput.current.click();
     // }
+    var data = [
+        {
+            "name":"Dr. John Doe",
+            "org":"Kings London Hospital",
+            "availibility":{
+                "sun":"10:00 AM - 06:00 PM",
+                "wed":"06:00 PM - 09:00 PM",
+                "fri":"06:00 PM - 09:00 PM"
+            },
+            "visitDurationInMin":15
+        },
+        {
+            "name":"Dr. Mary Ellis",
+            "org":"ABC Hospital",
+            "availibility":{
+                "sun":"10:00 AM - 06:00 PM",
+                "mon":"09:00 PM - 11:00 PM",
+                "thu":"11:00 AM - 02:00 PM"
+            },
+            "visitDurationInMin":15
+        }
+    ]   
+    
+    let disabled = "";
+    const [newTime, setTime] = useState({ name: ""});
+    function checkTime(newTime){
+        if (newTime.availibility.includes("sat")) {
+            disabled = "disabled"
+        }
+    }
+    // if(data.availibility.sun === ""){
+    //     disabled = "disabled"
+    // }
+
+
+
+
+
 //  Week day slot
     const [btnState, setBtnState] = useState(true);
     const [btnState1, setBtnState1] = useState(true);
@@ -83,18 +121,7 @@ const BookDoctor = () => {
 
     // 
 
-    const [timeData, setTimeData] = useState([]);
-    useEffect(()=>{
-        axios.get('../db.json')
-            .then(response =>
-                setTimeData(response.data));
-    })
-    const disabled = "";    
-    if(timeData.availibility == null){
-        const [disabled, setDisable] = "disabled";
-    }
-
-    // let time = Records.availibility.sun;
+    // let time = data.availibility[sun];
     let time = "06:00 PM - 09:00 PM"
     let intime = time.slice(0, 8)
     let outtime = time.slice(12)
@@ -137,7 +164,7 @@ const BookDoctor = () => {
                 Records && Records.map( record => {
                     return(
                         <div>
-                            <div className='cal-title' key={record.id}>
+                            <div className='cal-title' key={record.name}>
                                 <h1>Calendar</h1>
                                 <h2>{record.name}</h2>
                                 <h3>{record.org}</h3>

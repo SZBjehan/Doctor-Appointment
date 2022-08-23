@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 // import ParticlesBg from 'particles-bg';
 import {Fade, Slide} from 'react-reveal';
 import PBG from './ParticlesBG';
 import Records from "../db.json";
 import {Link, Route, Switch} from 'react-router-dom'; 
 
-function Doctors(){
+function Doctors({}){
     // 
     // const [appointment, setAppointment] = useContext(AppointmentContext);
     // const toBookingPage = () => {
@@ -18,7 +18,10 @@ function Doctors(){
     //     setCart(newCart);
     //     localStorage.setItem("cart", JSON.stringify(newCart));
     // }
-
+    const [data, setData] = useState('');
+    const recordData = (recordID) => {
+        setData(recordID);
+      }
 
     return (
         <div className='doctors' id='doctors'>
@@ -44,6 +47,7 @@ function Doctors(){
                                     <div>
                                         <Link 
                                             to={`/booking/${record.name}`}
+                                            recordData={recordData}
                                         >
                                             <div class="doc-body" key={record.id}>
                                                 <div class="doc-list-box">
