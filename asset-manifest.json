@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Doctor-Appointment/static/css/main.036ae495.css",
-    "main.js": "/Doctor-Appointment/static/js/main.fb4994dc.js",
+    "main.css": "/Doctor-Appointment/static/css/main.272072b7.css",
+    "main.js": "/Doctor-Appointment/static/js/main.3e637643.js",
     "static/js/787.fa4bc9d7.chunk.js": "/Doctor-Appointment/static/js/787.fa4bc9d7.chunk.js",
     "static/media/square-health.png": "/Doctor-Appointment/static/media/square-health.a4fcbf79897230ae0f92.png",
     "index.html": "/Doctor-Appointment/index.html",
-    "main.036ae495.css.map": "/Doctor-Appointment/static/css/main.036ae495.css.map",
-    "main.fb4994dc.js.map": "/Doctor-Appointment/static/js/main.fb4994dc.js.map",
+    "main.272072b7.css.map": "/Doctor-Appointment/static/css/main.272072b7.css.map",
+    "main.3e637643.js.map": "/Doctor-Appointment/static/js/main.3e637643.js.map",
     "787.fa4bc9d7.chunk.js.map": "/Doctor-Appointment/static/js/787.fa4bc9d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.036ae495.css",
-    "static/js/main.fb4994dc.js"
+    "static/css/main.272072b7.css",
+    "static/js/main.3e637643.js"
   ]
 }
