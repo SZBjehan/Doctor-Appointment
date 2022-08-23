@@ -25,7 +25,7 @@ export const Form = ({ onSubmit }) => {
         <input className="form-control" id="Visit" />
       </div>
       <div className="form-group">
-        <button className="form-control btn btn-primary" type="submit">
+        <button className="btnSubmit" type="submit">
           Submit
         </button>
       </div>
