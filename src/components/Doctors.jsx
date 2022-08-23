@@ -1,10 +1,10 @@
 import React from 'react'
-import ParticlesBg from 'particles-bg';
+// import ParticlesBg from 'particles-bg';
 import {Fade, Slide} from 'react-reveal';
 import PBG from './ParticlesBG';
 import Records from "../db.json";
 import {Link, Route, Switch} from 'react-router-dom'; 
-import Booking from '../pages/Booking';
+
 function Doctors(){
     // 
     // const [appointment, setAppointment] = useContext(AppointmentContext);

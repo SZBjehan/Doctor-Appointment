@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from "../components/Container";
+import { Container } from "./Container";
 import TimeSlot from "./TimeSlot"
 import {Link} from 'react-router-dom'; 
 import Records from "../db.json";
 import moment from 'moment';
 import axios from 'axios';
 
-const Cal = () => {
+const BookDoctor = () => {
     const triggerText = 'Book Appointment';
     const onSubmit = (event) => {
       event.preventDefault(event);
@@ -82,13 +82,18 @@ const Cal = () => {
     let toggleTImeCheck6 = btnState6 ? 'availibility' : 'hidden';
 
     // 
-    // const [timeData, setTimeData] = useState([]);
-    // useEffect(()=>{
-    //     axios.get('../db.json')
-    //         .then(response =>
-    //             setTimeData(response.data));
-    // })
-    // let time = timeData.availibility.sun;
+
+    const [timeData, setTimeData] = useState([]);
+    useEffect(()=>{
+        axios.get('../db.json')
+            .then(response =>
+                setTimeData(response.data));
+    })
+    const disabled = "";    
+    if(timeData.availibility == null){
+        const [disabled, setDisable] = "disabled";
+    }
+
     // let time = Records.availibility.sun;
     let time = "06:00 PM - 09:00 PM"
     let intime = time.slice(0, 8)
@@ -141,7 +146,7 @@ const Cal = () => {
                             <div className='cal'>
                                 <h3>Please click on the following day you want to book {record.name}</h3>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck} disabled`} onClick={handleClick}> Saturday    </summary>
+                                    <summary class={`${toggleClassCheck} ${disabled}`} onClick={handleClick} > Book Saturday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.sat}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -163,7 +168,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck1} disabled`} onClick={handleClick1}> Sunday    </summary>
+                                    <summary class={`${toggleClassCheck1} `} onClick={handleClick1}> Book Sunday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.sun}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -185,7 +190,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck2} disabled`} onClick={handleClick2}> Monday    </summary>
+                                    <summary class={`${toggleClassCheck2} disabled`} onClick={handleClick2}> Book Monday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.mon}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -207,7 +212,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck3} disabled`} onClick={handleClick3}> Tuesday    </summary>
+                                    <summary class={`${toggleClassCheck3} disabled`} onClick={handleClick3}> Book Tuesday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.tue}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -229,7 +234,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck4} disabled`} onClick={handleClick4}> Wednesday    </summary>
+                                    <summary class={`${toggleClassCheck4} `} onClick={handleClick4}> Book Wednesday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.wed}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -251,7 +256,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck5} disabled`} onClick={handleClick5}> Thursday    </summary>
+                                    <summary class={`${toggleClassCheck5} disabled`} onClick={handleClick5}> Book Thursday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.thu}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -273,7 +278,7 @@ const Cal = () => {
                                     </p>
                                 </details>
                                 <details className="week">
-                                    <summary class={`${toggleClassCheck6} disabled`} onClick={handleClick6}> Friday    </summary>
+                                    <summary class={`${toggleClassCheck6} `} onClick={handleClick6}> Book Friday    </summary>
                                     <p> 
                                     <b key={record.id}> Book from {record.availibility.fri}</b>
                                     <p>Visit Duration {record.visitDurationInMin}</p>
@@ -337,7 +342,7 @@ const Cal = () => {
     );
 }
 
-export default Cal;
+export default BookDoctor;
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import CalendarComponent from '../components/CalendarComponent'; 
-import Cal from '../components/Cal';
+import BookDoctor from '../components/BookDoctor';
+
 // import Doctors from '../components/Doctors';
 
 function Booking(){
@@ -11,7 +11,7 @@ function Booking(){
         <div>
             <Nav />
             {/* <CalendarComponent /> */}
-            <Cal />
+            <BookDoctor />
             {/* <Doctors /> */}
             <Footer />
         </div>
